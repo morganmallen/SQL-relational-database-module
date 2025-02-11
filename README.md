@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an expense tracker where the user can get, add, edit, or delete expenses to keep track of them. The user simply clicks the 'add expense' button to open a form and add an expense. If the user finds that they need to update an expense, they can edit it as needed by pushing the 'edit' button. If the expense is no longer relevant, they need to press the 'delete' button. 
 
-## Available Scripts
+This software utilized a relational database in SQLite. The project queries the database on mounting, and displays them in a table. When getting, adding, updating, or deleting an expense, a call in the backend is made to modify and get that data as requested.
 
-In the project directory, you can run:
+My reason for writing this software is to learn about relational databases, as well as how to use them in a fullstack setting. This broadened my knowledge greatly and feel more comfortable with coding with databases.
 
-### `npm start`
+{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of how created the Relational Database.}
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Software Demo Video](https://youtu.be/pvyT8UrmPS0)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Relational Database
 
-### `npm test`
+The database that I am using is SQLite.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I have two tables in this database: the 'categories' table and the 'expenses' table. The 'categories' table has the columns 'category_id' and 'name'. As the name suggests, it holds the categories of the type of expenses. The expenses table has the 'expense_id', 'amount', 'description', 'date', and 'category_id' columns with 'category_id' being a foreign key.
 
-### `npm run build`
+# Development Environment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The code editor I used to create this project is VSCode. The languages that I used to make this project is JavaScript and Node.js. The libraries used are React and Express.js, with SQLite being the database. These technologies work together to fetch data to fetch data form the database and display them for the user.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Useful Websites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [SQLite Docs](https://www.sqlite.org/docs.html)
+- [Youtube](https://www.youtube.com/playlist?list=PL84tBTIF9oqIka86oSQwNoziQ9ONTSXu1)
+- [W3schools](https://www.w3schools.com/sql/)
 
-### `npm run eject`
+# Future Work
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add a filtering method to display by date. 
+- Make a filtering method to display highest expenses to lowest by category.
+- Make a grand total that adds up all of the expenses.
